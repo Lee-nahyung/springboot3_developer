@@ -12,14 +12,14 @@ public class MemberService {
     @Autowired
     MemberRepository memberRepository;
 
-    public void test(){
+    public void test() {
 
-        memberRepository.save(new Member(1L , "A"));
+        memberRepository.save(new Member(1L, "A"));
 
         Optional<Member> member = memberRepository.findById(1L); //단건 조회
         List<Member> allMembers = memberRepository.findAll();    //전체 조회
-        memberRepository.deleteById(1L);
+        //memberRepository.deleteById(1L);
+
+    memberRepository.deleteById(1l);
     }
-
-
 }
