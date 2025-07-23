@@ -1,7 +1,7 @@
 package me.nahyung.springboot3_developer.controller;
 
 import lombok.RequiredArgsConstructor;
-import me.nahyung.springboot3_developer.AddArticleRequest;
+import me.nahyung.springboot3_developer.dto.AddArticleRequest;
 import me.nahyung.springboot3_developer.domain.Article;
 import me.nahyung.springboot3_developer.service.BlogService;
 import org.springframework.http.HttpStatus;

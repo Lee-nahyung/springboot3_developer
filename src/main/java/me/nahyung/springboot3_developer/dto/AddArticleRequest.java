@@ -1,4 +1,4 @@
-package me.nahyung.springboot3_developer;
+package me.nahyung.springboot3_developer.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

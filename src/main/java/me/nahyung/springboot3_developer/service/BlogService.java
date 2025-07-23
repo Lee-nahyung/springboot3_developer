@@ -1,7 +1,7 @@
 package me.nahyung.springboot3_developer.service;
 
 import lombok.RequiredArgsConstructor;
-import me.nahyung.springboot3_developer.AddArticleRequest;
+import me.nahyung.springboot3_developer.dto.AddArticleRequest;
 import me.nahyung.springboot3_developer.domain.Article;
 import me.nahyung.springboot3_developer.repository.BlogRepository;
 import org.springframework.stereotype.Service;
