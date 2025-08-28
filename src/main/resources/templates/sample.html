@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Thymeleaf Sample</title>
+</head>
+<body>
+<h1>Thymeleaf Sample Page</h1>
+<p th:text="${#temporals.format(today, 'yyyy-MM-dd')}"></p>
+<!-- th:if 조건문 -->
+<p th:if="${isAdmin}">관리자 계정입니다 ✅</p>
+<p th:unless="${isAdmin}">일반 사용자입니다 ❌</p>
+
+<!-- 객체 바인딩 -->
+<div th:object="${user}">
+  <p th:text="|아이디: *{id}|"></p>
+  <p th:text="|이름: *{name}|"></p>
+  <p th:text="|나이: *{age}|"></p>
+</div>
+
+<!-- th:each 반복문 -->
+<h3>보유 아이템 목록</h3>
+<ul>
+  <li th:each="item : ${items}" th:text="${item}">샘플아이템</li>
+</ul>
+
+<!-- 반복 중 조건문 -->
+<h3>역할(Role)</h3>
+<ul>
+  <li th:each="role : ${user.roles}">
+    <span th:text="${role}"></span>
+    <span th:if="${role == 'ADMIN'}">(최고 관리자)</span>
+  </li>
+</ul>
+
+<!-- 동적 링크 -->
+<a th:href="@{/api/articles/{id}(id=${user.id})}">유저 글 보기</a>
+</body>
+</html>
