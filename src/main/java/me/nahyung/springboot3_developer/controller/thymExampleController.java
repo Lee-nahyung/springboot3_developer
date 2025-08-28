@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Controller
-public class thymEampleController {
+public class thymExampleController {
 
     @GetMapping("/thymeleaf/sample")
     public String thymeleafSample(Model model){
